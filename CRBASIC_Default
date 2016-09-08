@@ -109,23 +109,23 @@ SDMBeginPort(C1)     'Starting port for SDM (valid starting ports: C1, U1, U5, o
 '* PERIPHERAL
 Const PERIPHERAL_CDM_A116 = TRUE 
 
-'* SENSORS
+'* SENSORS             ' I changed the FALSE to TRUE for the sensors we have*
 Const SENSOR_IRGASON     = TRUE                   'Unique: IRGASON, if TRUE, SENSOR_CSAT3AEC150 must be set to FALSE
 Const SENSOR_CSAT3AEC150 = FALSE                  'Unique: CSAT3A + EC150, if TRUE, SENSOR_IRGASON must be set to FALSE.
 Const SENSOR_FW          = FALSE                  'Unique: FW05, FW1, FW3, or other fine wire thermocouple
-Const SENSOR_TMPR_RH     = FALSE                  'Unique: HC2S3 or HMP155A: temperature and relative humidity probe
+Const SENSOR_TMPR_RH     = TRUE                  'Unique: HC2S3 or HMP155A: temperature and relative humidity probe
 Const SENSOR_NR_LITE     = FALSE                  'Unique: NR Lite2: net radiometer, if true, SENSOR_NR01 and SENSOR_CNR4 must be set to FALSE
 Const SENSOR_CS300       = FALSE                  'Unique: CS300: pyranometer, if true, SENSOR_NR01 and SENSOR_CNR4 must be set to FALSE
 Const SENSOR_LI200X      = FALSE                  'Unique: LI200X: pyranometer, if true, SENSOR_NR01 and SENSOR_CNR4 must be set to FALSE
-Const SENSOR_LI190SB     = FALSE                  'Unique: LI190SB: Quantum, if true, SENSOR_NR01 and SENSOR_CNR4 must be set to FALSE
+Const SENSOR_LI190SB     = FALSE      'LI-190R?   'Unique: LI190SB: Quantum, if true, SENSOR_NR01 and SENSOR_CNR4 must be set to FALSE
 Const SENSOR_SI111       = FALSE                  'Unique: SI111: Infrared radiometer, if true, SENSOR_NR01 and SENSOR_CNR4 must be set to FALSE
 Const SENSOR_NR01        = FALSE                  'Unique: NR01: 4-way net radiometer, if true, SENSOR_NR_LITE, SENSOR_CNR4, CS300, LI200X, LI190SB, and SI111 must be set to FALSE
-Const SENSOR_CNR4        = FALSE                  'Unique: CNR4: 4-way net radiometer, if true, SENSOR_NR_LITE, SENSOR_NR01, CS300, LI200X, LI190SB, and SI111 must be set to FALSE
-Const SENSOR_TE525mm     = FALSE                  'Unique: TE525mm rain gauge
-Const SENSOR_TCAV        = FALSE                  'Unique: TCAV: type E thermocouple averaging soil temperature probes
+Const SENSOR_CNR4        = TRUE                  'Unique: CNR4: 4-way net radiometer, if true, SENSOR_NR_LITE, SENSOR_NR01, CS300, LI200X, LI190SB, and SI111 must be set to FALSE
+Const SENSOR_TE525mm     = TRUE                  'Unique: TE525mm rain gauge
+Const SENSOR_TCAV        = TRUE                  'Unique: TCAV: type E thermocouple averaging soil temperature probes
 Const SENSOR_CS616       = FALSE                  'Unique: CS616: water content reflectometers for volumetric soil moisture, if true, SENSOR_CS65X must be set to FALSE
-Const SENSOR_CS65X       = FALSE                  'Unique: CS650 or CS655: water content reflectometers for volumetric soil moisture, if true, SENSOR_CS616 must be set to FALSE
-Const SENSOR_HFP01       = FALSE                  'Unique: HFP01: soil heat flux plates, if true, SENSOR_HFP01SC must be set to FALSE
+Const SENSOR_CS65X       = TRUE                  'Unique: CS650 or CS655: water content reflectometers for volumetric soil moisture, if true, SENSOR_CS616 must be set to FALSE
+Const SENSOR_HFP01       = TRUE                  'Unique: HFP01: soil heat flux plates, if true, SENSOR_HFP01SC must be set to FALSE
 Const SENSOR_HFP01SC     = FALSE                  'Unique: HFP01SC: self-calibrated soil heat flux plates, if true, SENSOR_HFP01 must be set to FALSE
 
 '* Composite boolean variables for variables above
